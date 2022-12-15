@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Garge-peli</title>
+        <meta name="author" content="Aleksi Kopponen">
+        <meta name="description" content="Garge-peli: saatavilla 22.12.2022">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Garge, GargeFPS, Garge-peli, Gargepeli, Clickteam, Aleksi Kopponen">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="downloader.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/images/icons/apple-touch-icon">
+        <meta name="theme-color" content="#ADFF00" />
+        <link rel="icon" type="image/png" sizes="32x32" href="resources/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resources/images/icons/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="resources/images/icons/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="resources/images/icons/favicon-512x512.png">
+        <link rel="icon" type="image/png" sizes="1024x1024" href="resources/images/icons/icon.png">
+        <link rel="manifest" href="resources/images/icons/site.webmanifest">
+        <script>
+            var launch  = new Date(1671667200000);
+            var now  = new Date();
+            if (now < launch){
+                window.location.replace('countdown.html');
+                }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                
+                <li class="hover_element" id="logo_container">
+                    <img style="width: 20px;" src="resources/images/heppaSVG.svg"/>
+                    <a href="https://gamejolt.com/@_Heppatytot" target="_blank" style="font-family: InterBold; font-size: 20px; padding-left: 4px;">Heppatytöt</a>
+                </li>
+                <li class="hover_element"><a href="https://www.youtube.com/@AksuAnimaatio" target="_blank">Youtube</a></li>
+                <li class="hover_element"><a href="https://gamejolt.com/@AnorexiaROTTA" target="_blank">GameJolt</a></li>
+                <li class="hover_element"><a href="https://github.com/HeppaTytot" target="_blank">Github</a></li>
+                <li class="hover_element" id="feedback" style="float:right"><a href="mailto:aksuanimaatio7@gmail.com">Lähetä palautetta</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="headersection">
+                <div id="headersection_content">
+                    <h1 class="hover_element">Garge-peli</h1>
+                    <h2 class="hover_element">Saatavilla nyt</h2>
+                    <div id="downloadbutton_container">
+                        <div class="downloadbutton hover_element" onclick="DownloadWindows()">
+                            <img class="platform_image" src="resources/images/windows.svg"/>
+                            <p class="platform_header">Windows</p>
+                        </div>
+                        <div class="downloadbutton hover_element" onclick="DownloadAndroid()">
+                            <img class="platform_image" src="resources/images/android.svg"/>
+                            <p class="platform_header">Android</p>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <div id="imagesection">
+                <img src="resources/images/laptop.png"/>
+            </div>
+        </main>
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/blender.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/gimp.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/gamejolt.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/vscode.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/photoshop.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/premierepro.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/clickteam.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/vegaspro.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/figma.png"/>
+                </div>
+
+
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/blender.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/gimp.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/gamejolt.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/vscode.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/photoshop.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/premierepro.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/clickteam.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/vegaspro.png"/>
+                </div>
+                <div class="slide">
+                    <img class="hover_element" src="resources/images/partners/figma.png"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="cursor"></div>
+        <script src="hover.js"></script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Garge-peli: saatavilla 22.12.2022</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/images/icons/apple-touch-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ADFF00" />
+        <meta name="author" content="Aleksi Kopponen">
+        <meta name="description" content="Odotusnäkymä garge-pelille">
+        <link rel="icon" type="image/png" sizes="32x32" href="resources/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resources/images/icons/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="resources/images/icons/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="resources/images/icons/favicon-512x512.png">
+        <link rel="icon" type="image/png" sizes="1024x1024" href="resources/images/icons/icon.png">
+        <link rel="manifest" href="resources/images/icons/site.webmanifest">
+    </head>
+    <style>
+        @font-face {
+            font-family: 'InterSemiBold';
+            src: url(resources/fonts/InterSemiBold.ttf);
+        }
+        body{
+            background-color: #ADFF00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            cursor: none;
+        }
+        h1{
+            font-size: 10vw;
+            font-family: InterSemiBold;
+            color: #000000;
+        }
+        h1:hover ~ .cursor{
+            transform: scale(6);
+        }
+        .cursor{
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            pointer-events: none;
+            background-color: #ffffff;
+            transition: 0.07s;
+            mix-blend-mode: difference;
+            transform: translate(-50%,-50%);
+        }
+        @media only screen and (max-width: 700px) {
+            .cursor{
+                display: none;
+            }
+            body{
+                cursor:default;
+            }
+        }
+    </style>
+    <body>
+        <h1 id="timer"></h1>
+        <div class="cursor"></div>
+        <script>
+            const countDate = new Date(1671667200000).getTime();
+            console.log(countDate );
+            var x = setInterval(function(){
+                let now = new Date().getTime();
+                
+                let distance = countDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+
+                document.getElementById('timer').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+                if(distance < 0){
+                    clearInterval(x);
+                    document.getElementById('timer').innerHTML = "Peli saatavilla nyt!";
+                    window.location.replace('index.html');
+                }
+            },100)
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.pageX + 'px';
+                cursor.style.top = e.pageY + 'px';
+            })
+        </script>
+    </body>
+</html>
