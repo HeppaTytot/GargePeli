@@ -5,7 +5,7 @@ function DownloadAndroid(){
         alert("Peli ei vielä saatavilla");
     }
     else{
-        window.open('resources/games/Garge.apk')
+        window.open('resources/games/garge.apk')
     }
 }
 function DownloadWindows(){
@@ -13,6 +13,6 @@ function DownloadWindows(){
         alert("Peli ei vielä saatavilla");
     }
     else{
-        window.open('resources/games/Garge.exe')
+        window.open('resources/games/garge.exe')
     }
 }
